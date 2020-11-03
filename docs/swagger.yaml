@@ -342,7 +342,7 @@ paths:
             $ref: '#/definitions/app.Response'
       summary: Import Image
   /auth:
-    get:
+    post:
       parameters:
       - description: userName
         in: query

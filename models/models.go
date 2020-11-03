@@ -3,21 +3,21 @@ package models
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
 	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"time"
 )
 
 var db *gorm.DB
 
 type Model struct {
-	ID         int `gorm:"primary_key" json:"id"`
-	CreatedOn  int `json:"created_on"`
-	ModifiedOn int `json:"modified_on"`
-	DeletedOn  int `json:"deleted_on"`
+	ID          int       `gorm:"primary_key" json:"id"`
+	CreatedTime time.Time `json:"created_time"`
+	UpdateTime  time.Time `json:"update_time"`
+	DeletedOn   int       `json:"deleted_on"`
 }
 
 // Setup initializes the database instance
@@ -50,17 +50,17 @@ func CloseDB() {
 	defer db.Close()
 }
 
-// updateTimeStampForCreateCallback will set `CreatedOn`, `ModifiedOn` when creating
+// updateTimeStampForCreateCallback will set `CreatedTime`, `ModifiedOn` when creating
 func updateTimeStampForCreateCallback(scope *gorm.Scope) {
 	if !scope.HasError() {
 		nowTime := time.Now().Unix()
-		if createTimeField, ok := scope.FieldByName("CreatedOn"); ok {
+		if createTimeField, ok := scope.FieldByName("create_time"); ok {
 			if createTimeField.IsBlank {
 				createTimeField.Set(nowTime)
 			}
 		}
 
-		if modifyTimeField, ok := scope.FieldByName("ModifiedOn"); ok {
+		if modifyTimeField, ok := scope.FieldByName("update_time"); ok {
 			if modifyTimeField.IsBlank {
 				modifyTimeField.Set(nowTime)
 			}
