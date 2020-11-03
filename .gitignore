@@ -6,3 +6,4 @@ runtime/*
 !runtime/fonts
 logs/*
 vendor/*
+.vscode/*
