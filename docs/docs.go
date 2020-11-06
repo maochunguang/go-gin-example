@@ -19,11 +19,11 @@ var doc = `{
     "info": {
         "description": "{{.Description}}",
         "title": "{{.Title}}",
-        "termsOfService": "https://github.com/EDDYCJY/go-gin-example",
+        "termsOfService": "https://github.com/maochunguang/go-gin-example",
         "contact": {},
         "license": {
             "name": "MIT",
-            "url": "https://github.com/EDDYCJY/go-gin-example/blob/master/LICENSE"
+            "url": "https://github.com/maochunguang/go-gin-example/blob/master/LICENSE"
         },
         "version": "{{.Version}}"
     },

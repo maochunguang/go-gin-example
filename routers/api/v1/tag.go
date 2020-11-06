@@ -3,17 +3,17 @@ package v1
 import (
 	"net/http"
 
-	"github.com/unknwon/com"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
+	"github.com/unknwon/com"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/export"
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
-	"github.com/EDDYCJY/go-gin-example/service/tag_service"
+	"github.com/maochunguang/go-gin-example/pkg/app"
+	"github.com/maochunguang/go-gin-example/pkg/e"
+	"github.com/maochunguang/go-gin-example/pkg/export"
+	"github.com/maochunguang/go-gin-example/pkg/logging"
+	"github.com/maochunguang/go-gin-example/pkg/setting"
+	"github.com/maochunguang/go-gin-example/pkg/util"
+	"github.com/maochunguang/go-gin-example/service/tag_service"
 )
 
 // @Summary Get multiple article tags
