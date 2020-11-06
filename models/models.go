@@ -15,7 +15,7 @@ var db *gorm.DB
 
 type Model struct {
 	ID          int       `gorm:"primary_key" json:"id"`
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime time.Time `json:"create_time"`
 	UpdateTime  time.Time `json:"update_time"`
 	DeletedOn   int       `json:"deleted_on"`
 }

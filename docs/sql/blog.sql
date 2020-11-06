@@ -40,6 +40,7 @@ CREATE TABLE `blog_auth` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) DEFAULT '' COMMENT '账号',
   `password` varchar(50) DEFAULT '' COMMENT '密码',
+  `deleted_on` int(10) unsigned DEFAULT '0',
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`)
