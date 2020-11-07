@@ -82,6 +82,10 @@ func EditArticle(id int, data interface{}) error {
 
 // AddArticle add a single article
 func AddArticle(data map[string]interface{}) error {
+	//mode := Model{
+	//	CreateTime: time.Now(),
+	//	UpdateTime: time.Now(),
+	//}
 	article := Article{
 		TagID:         data["tag_id"].(int),
 		Title:         data["title"].(string),
@@ -90,6 +94,7 @@ func AddArticle(data map[string]interface{}) error {
 		CreatedBy:     data["created_by"].(string),
 		State:         data["state"].(int),
 		CoverImageUrl: data["cover_image_url"].(string),
+		//Model:         mode,
 	}
 	if err := db.Create(&article).Error; err != nil {
 		return err

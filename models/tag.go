@@ -30,10 +30,15 @@ func ExistTagByName(name string) (bool, error) {
 
 // AddTag Add a Tag
 func AddTag(name string, state int, createdBy string) error {
+	//mode := Model{
+	//	CreateTime: time.Now(),
+	//	UpdateTime: time.Now(),
+	//}
 	tag := Tag{
 		Name:      name,
 		State:     state,
 		CreatedBy: createdBy,
+		//Model:     mode,
 	}
 	if err := db.Create(&tag).Error; err != nil {
 		return err

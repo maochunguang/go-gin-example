@@ -116,7 +116,7 @@ func (t *Tag) Export() (string, error) {
 			strconv.Itoa(v.ID),
 			v.Name,
 			v.CreatedBy,
-			v.CreatedTime.Format("2006-01-01 10:00:00"),
+			v.CreateTime.Format("2006-01-01 10:00:00"),
 			v.ModifiedBy,
 			v.UpdateTime.Format("2006-01-01 10:00:00"),
 		}

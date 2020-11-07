@@ -14,10 +14,10 @@ import (
 var db *gorm.DB
 
 type Model struct {
-	ID          int       `gorm:"primary_key" json:"id"`
-	CreatedTime time.Time `json:"create_time"`
-	UpdateTime  time.Time `json:"update_time"`
-	DeletedOn   int       `json:"deleted_on"`
+	ID         int       `gorm:"primary_key" json:"id"`
+	CreateTime time.Time `json:"create_time"`
+	UpdateTime time.Time `json:"update_time"`
+	DeletedOn  int       `json:"deleted_on"`
 }
 
 // Setup initializes the database instance
